@@ -43,13 +43,13 @@ def parse_xml(path: str) -> pd.DataFrame:
 
     # ----------  NE MODIFIEZ PAS LA FONCTION AU-DESSUS DE CETTE LIGNE ---------- #
 
-    # Parse the XML file
+    # Parse le XML
     tree = ET.parse(path)
     root = tree.getroot()
 
-    # Iterate over the XML entries and extract the values for each person
+    # Extraire les valeurs de chaque élément
     data = []
-    for child in root:  # Assuming 'person' is the XML tag for each player
+    for child in root:
         row = {_attr: _get_val(child, _attr) for _attr in TARGET_ATTRIBUTES}
         data.append(row)
 
@@ -78,8 +78,6 @@ def clean_data(df: pd.DataFrame, year_cutoff: int) -> pd.DataFrame:
 
     # Filtrer par age
     df = df[df["birthday"] <= year_cutoff]
-
-    print(df.dtypes)
 
     return df
 
@@ -157,9 +155,6 @@ class PermutationTest:
         if seed is not None:
             np.random.seed(seed)
 
-        # TODO : échantillonnez deux groupes de taille n_overrep, n_underrep et renvoyez la note maximale pour chacun
-        # des groupe dans l'ordre (overrep, underrep)
-
         # Shuffle les indexes
         shuffled_indices = np.random.permutation(self.df.index)
 
@@ -197,7 +192,6 @@ def sample_two_groups(
     best_over = []
     best_under = []
 
-    # TODO : exécutez n_iter runs de cette expérience et renvoyez un tableau numpy contenant les valeurs maximales des groupes surreprésentés et sous-représentés respectivement.
     for i in tqdm(range(n_iter)):
         pt = PermutationTest(df, n_overrep, n_underrep)
         overrep_scores, underrep_scores = pt.job()
