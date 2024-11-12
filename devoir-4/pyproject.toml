@@ -1,0 +1,23 @@
+[project]
+name = "devoir-4"
+version = "0.1.0"
+description = "IFT3700 - Devoir 4"
+readme = "README.md"
+requires-python = ">=3.11"
+dependencies = [
+    "black>=24.10.0",
+    "flask>=3.0.3",
+    "flask-cors>=5.0.0",
+    "flask-sslify>=0.1.5",
+    "gunicorn>=23.0.0",
+    "matplotlib>=3.9.2",
+    "pandas>=2.2.3",
+    "pillow>=11.0.0",
+    "requests>=2.32.3",
+    "setuptools>=75.3.0",
+    "streamlit>=1.22.0",
+    "torch>=2.5.1",
+    "torchvision>=0.20.1",
+    "validators>=0.34.0",
+    "pyyaml>=6.0.2",
+]
