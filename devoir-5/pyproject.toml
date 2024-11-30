@@ -1,0 +1,17 @@
+[project]
+name = "devoir-5"
+version = "0.1.0"
+description = "IFT3700 - Devoir 5"
+readme = "README.md"
+requires-python = ">=3.11"
+dependencies = [
+    "black>=24.10.0",
+    "eli5>=0.13.0",
+    "jupyterlab>=4.3.1",
+    "matplotlib>=3.9.2",
+    "numpy==1.26.4",
+    "pandas>=2.2.3",
+    "scikit-learn==1.2.2",
+    "seaborn>=0.13.2",
+    "shap>=0.46.0",
+]
