@@ -1,0 +1,10 @@
+[project]
+name = "devoir-6"
+version = "0.1.0"
+description = "IFT3700 - Devoir 6"
+readme = "README.md"
+requires-python = ">=3.11"
+dependencies = [
+    "black>=24.10.0",
+    "jupyterlab>=4.3.1",
+]
